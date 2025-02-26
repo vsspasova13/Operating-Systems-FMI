@@ -1,1 +1,5 @@
-find -type f -newer practice/01/f3 -exec rm -i {} +
+#Изведете всички файлове, които са по-нови от practice/01/f1 ( би трябвало да е създаден като част от по-ранна задача ).
+
+
+find -newer practice/01/f1
+
