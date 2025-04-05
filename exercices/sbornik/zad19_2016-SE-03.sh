@@ -1,6 +1,11 @@
 
 #!/bin/bash
 
+if [ "$(id -u)" -ne 0 ]; then
+    echo "You have to open it as root!"
+    exit 1
+fi
+
 while read -r line
 do
   user=$(echo $line | cut -d':' -f1)

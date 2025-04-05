@@ -1,6 +1,12 @@
 
 #!/bin/bash
 
+if [ "$(id -u)" -ne 0 ]; then
+    echo "You have to open it as root!"
+    exit 1
+fi
+
+
 num=$1
 
 sum=0
